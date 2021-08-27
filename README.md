@@ -5,5 +5,8 @@
 ![Visitor Count](https://profile-counter.glitch.me/Florin-Catalin/count.svg)
 
 ## Other links : 
+
+* Gitlab profile : https://gitlab.com/Florin-Catalin
 * Check my presentation website here : https://ungureanu-florin-catalin.herokuapp.com/
- * If you want to  challenge me to a chess game : https://lichess.org/@/uflorin
+* If you want to  challenge me to a chess game : https://lichess.org/@/uflorin
+* LinkedIn profile : https://www.linkedin.com/in/florin-c%C4%83t%C4%83lin-ungureanu/
