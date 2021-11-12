@@ -39,3 +39,64 @@ jobs:
           delay: 120
 
       # ======================================================================================
+      
+      
+        # 🌇 GitHub Skyline 3D calendar
+
+      - name: 🌇 GitHub Skyline 3D calendar
+        if: ${{ success() || failure() }}
+        uses: lowlighter/metrics@master
+        with:
+          filename: metrics.plugin.skyline.svg
+          token: NOT_NEEDED
+          plugin_skyline: yes
+          plugin_skyline_year: 2020
+          plugin_skyline_frames: 6
+          plugin_skyline_quality: 1
+          plugins_errors_fatal: ${{ github.repository == 'Florin-Catalin/Florin-Catalin' }}
+          output_action: pull-request
+          delay: 120
+
+      # ======================================================================================
+       # 📅 Isometric commit calendar
+
+      - name: 📅 Isocalendar plugin (half year)
+        if: ${{ success() || failure() }}
+        uses: lowlighter/metrics@master
+        with:
+          filename: metrics.plugin.isocalendar.svg
+          token: ${{ secrets.METRIC_TOKEN }}
+          base: ""
+          plugin_isocalendar: yes
+          plugins_errors_fatal: ${{ github.repository == 'Florin-Catalin/Florin-Catalin' }}
+          output_action: pull-request
+          delay: 120
+
+      - name: 📅 Isocalendar plugin (full year)
+        if: ${{ success() || failure() }}
+        uses: lowlighter/metrics@master
+        with:
+          filename: metrics.plugin.isocalendar.fullyear.svg
+          token: ${{ secrets.METRIC_TOKEN }}
+          base: ""
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+          plugins_errors_fatal: ${{ github.repository == 'Florin-Catalin/Florin-Catalin' }}
+          output_action: pull-request
+          delay: 120
+          
+          
+      - name: 🈷️ Languages plugin (indepth analysis)
+        if: ${{ success() || failure() }}
+        uses: lowlighter/metrics@master
+        with:
+          filename: metrics.plugin.languages.indepth.svg
+          token: ${{ secrets.METRIC_TOKEN }}
+          base: ""
+          plugin_languages: yes
+          plugin_languages_indepth: yes
+          plugin_languages_details: lines, bytes-size
+          plugin_languages_limit: 4
+          plugins_errors_fatal: ${{ github.repository == 'Florin-Catalin/Florin-Catalin' }}
+          output_action: pull-request
+          delay: 120
