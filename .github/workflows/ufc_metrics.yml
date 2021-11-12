@@ -18,7 +18,7 @@ jobs:
           token: ${{ secrets.METRIC_TOKEN }}
           base: ""
           plugin_achievements: yes
-          plugin_achievements_only: sponsor, maintainer, octonaut
+          plugin_achievements_only: polyglot, member, stargazer, developer
           plugins_errors_fatal: ${{ github.repository == 'Florin-Catalin/Florin-Catalin' }}
           output_action: pull-request
           delay: 120
