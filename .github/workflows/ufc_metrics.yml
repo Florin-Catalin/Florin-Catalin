@@ -1,0 +1,41 @@
+name: Metrics (examples)
+on:
+  schedule:
+    - cron: "0 8 * * *"
+  workflow_dispatch:
+jobs:
+  github-metrics-examples:
+    runs-on: ubuntu-latest
+    if: "github.repository == 'Florin-Catalin/Florin-Catalin'"
+    steps:
+          # 🏆 Achievements
+
+      - name: 🏆 Achievements
+        if: ${{ success() || failure() }}
+        uses: lowlighter/metrics@master
+        with:
+          filename: metrics.plugin.achievements.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_achievements: yes
+          plugin_achievements_only: sponsor, maintainer, octonaut
+          plugins_errors_fatal: ${{ github.repository == 'Florin-Catalin/Florin-Catalin' }}
+          output_action: pull-request
+          delay: 120
+
+      - name: 🏆 Achievements (compact display)
+        if: ${{ success() || failure() }}
+        uses: lowlighter/metrics@master
+        with:
+          filename: metrics.plugin.achievements.compact.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_achievements: yes
+          plugin_achievements_only: polyglot, stargazer, sponsor, deployer, member, maintainer, developer, scripter, packager, explorer, infographile, manager
+          plugin_achievements_display: compact
+          plugin_achievements_threshold: X
+          plugins_errors_fatal: ${{ github.repository == 'Florin-Catalin/Florin-Catalin' }}
+          output_action: pull-request
+          delay: 120
+
+      # ======================================================================================
