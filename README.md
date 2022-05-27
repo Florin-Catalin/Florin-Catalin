@@ -8,5 +8,7 @@
 
 
 * Check out my platform : http://blog.uflorin.xyz/
-* If you want to  challenge me to a chess game   https://lichess.org/@/uflorin
-* LinkedIn profile : https://www.linkedin.com/in/florin-c%C4%83t%C4%83lin-ungureanu/
+<a href="https://lichess.org/@/uflorin" target="_blank" title="Lichess"><img src="https://img.shields.io/badge/uflorin-FFFFFF?style=for-the-badge&logo=lichess&logoColor=black" /></a>
+<a href="https://www.linkedin.com/in/florin-c%C4%83t%C4%83lin-ungureanu/" target="_blank" title="Linkedin"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+<a href="" target="_blank" title="Gmail"><img src="https://img.shields.io/badge/florin.g.ungureanu@gmail.com-000000?style=for-the-badge&logo=google&logoColor=red" /></a>
+
