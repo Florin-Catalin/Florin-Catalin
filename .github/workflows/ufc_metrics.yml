@@ -1,7 +1,7 @@
 name: Metrics (examples)
 on:
   schedule:
-    - cron: "0 8 * * *"
+    - cron: "0 8 1 * *" # once a month to reduce the number of merge requests 
   workflow_dispatch:
 jobs:
   github-metrics-examples:
