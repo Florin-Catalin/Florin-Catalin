@@ -1,4 +1,4 @@
-# Ayhoi 🏴‍☠️ [![CPP][cpp-badge]](#)
+# Ayhoi 🏴‍☠️ ![CPP][cpp-badge]
 
 My name is Ungureanu Florin-Cătălin. I'm a software developer and engineer.
 
