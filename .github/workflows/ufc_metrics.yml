@@ -7,12 +7,14 @@ jobs:
   github-metrics-examples:
     runs-on: ubuntu-latest
     if: "github.repository == 'Florin-Catalin/Florin-Catalin'"
+    permissions:
+      contents: write
     steps:
           # 🏆 Achievements
 
       - name: 🏆 Achievements
         if: ${{ success() || failure() }}
-        uses: lowlighter/metrics@master
+        uses: lowlighter/metrics@latest
         with:
           filename: metrics.plugin.achievements.svg
           token: ${{ secrets.METRIC_TOKEN }}
@@ -20,12 +22,12 @@ jobs:
           plugin_achievements: yes
           plugin_achievements_only: polyglot, member, stargazer, developer
           plugins_errors_fatal: ${{ github.repository == 'Florin-Catalin/Florin-Catalin' }}
-          output_action: pull-request
-          delay: 120
+          output_action: commit
+          committer_message: "Update {filename} - [Skip GitHub Action]"
 
       - name: 🏆 Achievements (compact display)
         if: ${{ success() || failure() }}
-        uses: lowlighter/metrics@master
+        uses: lowlighter/metrics@latest
         with:
           filename: metrics.plugin.achievements.compact.svg
           token: ${{ secrets.METRIC_TOKEN }}
@@ -35,8 +37,8 @@ jobs:
           plugin_achievements_display: compact
           plugin_achievements_threshold: X
           plugins_errors_fatal: ${{ github.repository == 'Florin-Catalin/Florin-Catalin' }}
-          output_action: pull-request
-          delay: 120
+          output_action: commit
+          committer_message: "Update {filename} - [Skip GitHub Action]"
 
       # ======================================================================================
       
@@ -45,7 +47,7 @@ jobs:
 
       - name: 🌇 GitHub Skyline 3D calendar
         if: ${{ success() || failure() }}
-        uses: lowlighter/metrics@master
+        uses: lowlighter/metrics@latest
         with:
           filename: metrics.plugin.skyline.svg
           token: NOT_NEEDED
@@ -54,27 +56,27 @@ jobs:
           plugin_skyline_frames: 6
           plugin_skyline_quality: 1
           plugins_errors_fatal: ${{ github.repository == 'Florin-Catalin/Florin-Catalin' }}
-          output_action: pull-request
-          delay: 120
+          output_action: commit
+          committer_message: "Update {filename} - [Skip GitHub Action]"
 
       # ======================================================================================
        # 📅 Isometric commit calendar
 
       - name: 📅 Isocalendar plugin (half year)
         if: ${{ success() || failure() }}
-        uses: lowlighter/metrics@master
+        uses: lowlighter/metrics@latest
         with:
           filename: metrics.plugin.isocalendar.svg
           token: ${{ secrets.METRIC_TOKEN }}
           base: ""
           plugin_isocalendar: yes
           plugins_errors_fatal: ${{ github.repository == 'Florin-Catalin/Florin-Catalin' }}
-          output_action: pull-request
-          delay: 120
+          output_action: commit
+          committer_message: "Update {filename} - [Skip GitHub Action]"
 
       - name: 📅 Isocalendar plugin (full year)
         if: ${{ success() || failure() }}
-        uses: lowlighter/metrics@master
+        uses: lowlighter/metrics@latest
         with:
           filename: metrics.plugin.isocalendar.fullyear.svg
           token: ${{ secrets.METRIC_TOKEN }}
@@ -82,13 +84,13 @@ jobs:
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
           plugins_errors_fatal: ${{ github.repository == 'Florin-Catalin/Florin-Catalin' }}
-          output_action: pull-request
-          delay: 120
+          output_action: commit
+          committer_message: "Update {filename} - [Skip GitHub Action]"
           
           
       - name: 🈷️ Languages plugin (indepth analysis)
         if: ${{ success() || failure() }}
-        uses: lowlighter/metrics@master
+        uses: lowlighter/metrics@latest
         with:
           filename: metrics.plugin.languages.indepth.svg
           token: ${{ secrets.METRIC_TOKEN }}
@@ -98,5 +100,7 @@ jobs:
           plugin_languages_details: lines, bytes-size
           plugin_languages_limit: 4
           plugins_errors_fatal: ${{ github.repository == 'Florin-Catalin/Florin-Catalin' }}
+          output_action: commit
+          committer_message: "Update {filename} - [Skip GitHub Action]"
           output_action: pull-request
           delay: 120
