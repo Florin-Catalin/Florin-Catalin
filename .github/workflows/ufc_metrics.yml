@@ -10,6 +10,11 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.METRIC_TOKEN }}
+
           # 🏆 Achievements
 
       - name: 🏆 Achievements
@@ -102,5 +107,3 @@ jobs:
           plugins_errors_fatal: ${{ github.repository == 'Florin-Catalin/Florin-Catalin' }}
           output_action: commit
           committer_message: "Update {filename} - [Skip GitHub Action]"
-          output_action: pull-request
-          delay: 120
