@@ -1,5 +1,3 @@
-# Ayhoi 🏴‍☠️ ![CPP][cpp-badge]
-
 <!-- 
 ## Links ⛓️
 
