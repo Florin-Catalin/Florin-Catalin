@@ -1,37 +1,26 @@
-# Hi, I'm Florin-Cătălin 👋
+# Hi, I'm Florin
 
-## How to reach me
 
-- [![LinkedIn][linkedin-badge]][linkedin-link]
-- [![Email][gmail-badge]][email-link]
-- [![Lichess][lichess-badge]][lichess-link]
+ [![LinkedIn][linkedin-badge]][linkedin-link]
+[![Email][gmail-badge]][email-link]
+[![Lichess][lichess-badge]][lichess-link]
 
----
 
-## 📅 Commit Activity
 
 <p align="center">
   <img src="metrics.plugin.isocalendar.svg" alt="Isometric calendar (half year)" width="49%" />
   <img src="metrics.plugin.isocalendar.fullyear.svg" alt="Isometric calendar (full year)" width="49%" />
 </p>
 
----
-
-## 🈷️ Languages
-
 <p align="center">
   <img src="metrics.plugin.languages.indepth.svg" alt="Languages" />
 </p>
 
----
-
-## 🌇 GitHub Skyline
 
 <p align="center">
   <img src="metrics.plugin.skyline.svg" alt="GitHub Skyline 3D calendar" />
 </p>
 
----
 
 [linkedin-link]: https://www.linkedin.com/in/florin-c%C4%83t%C4%83lin-ungureanu/
 [linkedin-badge]: https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&logoColor=white
