@@ -1,7 +1,10 @@
 # Hi, I'm Florin
 
+<p align="center">
+  <video src="me.mp4" controls autoplay loop muted width="100%"></video>
+</p>
 
- [![LinkedIn][linkedin-badge]][linkedin-link]
+[![LinkedIn][linkedin-badge]][linkedin-link]
 [![Email][gmail-badge]][email-link]
 [![Lichess][lichess-badge]][lichess-link]
 
