@@ -1,7 +1,7 @@
 name: Metrics (examples)
 on:
   schedule:
-    - cron: "0 8 1 * *" # once a month to reduce the number of merge requests 
+    - cron: "0 8 * * 0" # every Sunday at 8am UTC
   workflow_dispatch:
 jobs:
   github-metrics-examples:
@@ -15,35 +15,9 @@ jobs:
         with:
           token: ${{ secrets.METRIC_TOKEN }}
 
-          # 🏆 Achievements
-
-      - name: 🏆 Achievements
-        if: ${{ success() || failure() }}
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics.plugin.achievements.svg
-          token: ${{ secrets.METRIC_TOKEN }}
-          base: ""
-          plugin_achievements: yes
-          plugin_achievements_only: polyglot, member, stargazer, developer
-          plugins_errors_fatal: ${{ github.repository == 'Florin-Catalin/Florin-Catalin' }}
-          output_action: commit
-          committer_message: "Update {filename} - [Skip GitHub Action]"
-
-      - name: 🏆 Achievements (compact display)
-        if: ${{ success() || failure() }}
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics.plugin.achievements.compact.svg
-          token: ${{ secrets.METRIC_TOKEN }}
-          base: ""
-          plugin_achievements: yes
-          plugin_achievements_only: polyglot, stargazer, sponsor, deployer, member, maintainer, developer, scripter, packager, explorer, infographile, manager
-          plugin_achievements_display: compact
-          plugin_achievements_threshold: X
-          plugins_errors_fatal: ${{ github.repository == 'Florin-Catalin/Florin-Catalin' }}
-          output_action: commit
-          committer_message: "Update {filename} - [Skip GitHub Action]"
+      - name: Get current year
+        id: year
+        run: echo "value=$(date +'%Y')" >> $GITHUB_OUTPUT
 
       # ======================================================================================
       
@@ -57,7 +31,7 @@ jobs:
           filename: metrics.plugin.skyline.svg
           token: NOT_NEEDED
           plugin_skyline: yes
-          plugin_skyline_year: 2020
+          plugin_skyline_year: ${{ steps.year.outputs.value }}
           plugin_skyline_frames: 6
           plugin_skyline_quality: 1
           plugins_errors_fatal: ${{ github.repository == 'Florin-Catalin/Florin-Catalin' }}
